@@ -19,7 +19,7 @@ stages{
     stage('Compile-Package'){
     steps{
         echo 'Before compile'
-        sh 'mvn clean package'
+        sh 'mvn -f proj_sonar/pom.xml clean test'
         echo 'after compile'
     }
     }
